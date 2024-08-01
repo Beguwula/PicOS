@@ -1,17 +1,17 @@
 import uos
 
-def exists(directory_path):
+def exists(path):
     try:
-        uos.stat(directory_path)
+        uos.stat(path)
         return True
     except OSError:
         return False
 
 # Example usage:
 '''
-directory_path = "/path"
-if directory_exists(directory_path):
-    print(f"The directory {directory_path} exists.")
+path = "/path"
+if exists(path):
+    print(f"The directory {path} exists.")
 else:
-    print(f"The directory {directory_path} does not exist.")
+    print(f"The directory {path} does not exist.")
 '''
